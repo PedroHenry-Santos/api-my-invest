@@ -2,15 +2,15 @@ import { ConnectionOptions } from 'typeorm';
 
 const ORMConfig: ConnectionOptions = {
   type: 'postgres',
-  host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT),
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
+  host: process.env.POSTGRES_HOST,
+  port: parseInt(process.env.POSTGRES_PORT),
+  username: process.env.POSTGRES_USERNAME,
+  password: process.env.POSTGRES_PASSWORD,
+  database: process.env.POSTGRES_DATABASE,
   entities: [],
 
   // We are using migrations, synchronize should be set to false.
-  synchronize: stringToBool(process.env.DB_SYNCHRONIZE),
+  synchronize: stringToBool(process.env.POSTGRES_SYNCHRONIZE),
 
   // Run migrations automatically,
   // you can disable this if you prefer running migration manually.
