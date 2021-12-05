@@ -8,12 +8,12 @@ import { S3Module } from '@ntegral/nestjs-s3';
 import { SentryModule } from '@ntegral/nestjs-sentry';
 import { ConnectionOptions } from 'typeorm';
 
-import HTTPconfig from './core/config/http.config';
+import HTTPConfig from './core/config/HTTP.config';
+import ORMConfig from './core/config/ORM.config';
 import redisConfig from './core/config/redis.config';
 import s3Config from './core/config/s3.config';
 import sentryConfig from './core/config/sentry.config';
 import throttlerConfig from './core/config/throttler.config';
-import ORMConfig from './core/config/typeorm.config';
 
 @Module({
   imports: [
@@ -21,7 +21,7 @@ import ORMConfig from './core/config/typeorm.config';
       isGlobal: true,
       load: [
         registerAs('typeorm', (): ConnectionOptions => ORMConfig),
-        registerAs('axios', (): HttpModuleOptions => HTTPconfig),
+        registerAs('axios', (): HttpModuleOptions => HTTPConfig),
         redisConfig,
         throttlerConfig,
         sentryConfig,
