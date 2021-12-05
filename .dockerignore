@@ -4,3 +4,5 @@ node_modules
 .gitignore
 coverage
 generators
+.scannerwork
+sonar-project.properties

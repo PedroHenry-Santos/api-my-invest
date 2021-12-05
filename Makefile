@@ -6,3 +6,9 @@ release:
 start:
 	chmod +x ./init.sh
 	./init.sh
+
+sonar:
+	docker-compose -f docker-compose.development.yml up -d
+
+scaner:
+	yarn sonar-scanner

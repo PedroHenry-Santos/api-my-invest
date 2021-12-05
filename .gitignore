@@ -43,3 +43,9 @@ lerna-debug.log*
 
 ormlogs.log
 /.vscode
+/.scannerwork
+sonar-project.properties
+/pgdata
+/redis
+
+pedrohenry-santos
