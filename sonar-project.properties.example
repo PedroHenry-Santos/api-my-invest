@@ -1,0 +1,11 @@
+sonar.projectKey=myinvest
+sonar.projectName=myinvest
+sonar.sourceEncoding=UTF-8
+sonar.sources=src
+sonar.exclusions=**/*.spec.ts
+sonar.tests=src
+sonar.test.inclusions=**/*.spec.ts
+sonar.javascript.coveragePlugin=lcov
+sonar.javascript.lcov.reportPaths=coverage/lcov.info
+sonar.login=
+sonar.host.url=
