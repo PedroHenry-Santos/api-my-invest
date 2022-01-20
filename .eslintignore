@@ -1,0 +1,8 @@
+**/*.hbs
+node_modules
+dist
+*.js
+sonar-project.properties
+public
+**/out/*
+.vscode

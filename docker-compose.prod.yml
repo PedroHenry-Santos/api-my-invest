@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  application:
+    container_name: api-nois-invest
+    restart: "always"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    expose:
+      - ${PORT}
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - ./:/usr/src/app
+    

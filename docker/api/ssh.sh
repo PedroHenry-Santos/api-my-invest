@@ -1,0 +1,1 @@
+bash -c "clear && docker exec -it api-nois-invest bash"
